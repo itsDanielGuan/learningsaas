@@ -23,7 +23,7 @@ interface CompanionsListProps {
 const CompanionsList = ({title,companions,classNames}: CompanionsListProps) => {
   return (
     <article className={cn('companion-list', classNames)}>
-        <h2 className='font-bold text-3xl'>Recent Sessions</h2>
+        <h2 className='font-bold text-3xl'>{title}</h2>
 
         <Table>
             <TableHeader>
@@ -50,10 +50,10 @@ const CompanionsList = ({title,companions,classNames}: CompanionsListProps) => {
                                         />
                                     </div>
                                     <div className='flex flex-col gap-2'>
-                                        <p className='font-bold text-2xl'>
+                                        <p className='font-bold text-2xl !no-underline'>
                                             {name}
                                         </p>
-                                        <p className='text-lg'>
+                                        <p className='text-lg !no-underline'>
                                             {topic}
                                         </p>
                                     </div>
@@ -77,8 +77,8 @@ const CompanionsList = ({title,companions,classNames}: CompanionsListProps) => {
                             </div>
                         </TableCell>
                         <TableCell>
-                            <div className='flex items-center gap-2 w-full justify-end'>
-                                <p className='text-2xl'>
+                            <div className='flex flex-row items-center gap-2 w-full justify-end'>
+                                <p className='text-2xl h-fit'>
                                     {duration} {' '}
                                     <span className='max-md:hidden'>
                                         mins
